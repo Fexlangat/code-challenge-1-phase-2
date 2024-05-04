@@ -27,7 +27,7 @@ function AccountContainer() {
       .then((response) => response.json())
       .then((data) => {
         setTransactions((prevTransactions) => [...prevTransactions, data]);
-        
+
         filterTransactions();
       })
       .catch((error) => console.error("Error adding transaction:", error));
@@ -44,12 +44,31 @@ function AccountContainer() {
     }
   };
 
+  const deleteTransaction = (id) => {
+   
+    fetch(`http://localhost:8001/transactions/${id}`, {
+      method: "DELETE"
+    })
+      .then(() => {
+ 
+        setTransactions((prevTransactions) =>
+          prevTransactions.filter((transaction) => transaction.id !== id)
+        );
+
+        filterTransactions();
+      })
+      .catch((error) => console.error("Error deleting transaction:", error));
+  };
+
   return (
     <div>
       <h1>Bank of Flatiron</h1>
       <Search onSearch={filterTransactions} />
       <AddTransactionForm onAddTransaction={addTransaction} />
-      <TransactionsList transactions={filteredTransactions} />
+      <TransactionsList
+        transactions={filteredTransactions}
+        onDeleteTransaction={deleteTransaction}
+      />
     </div>
   );
 }

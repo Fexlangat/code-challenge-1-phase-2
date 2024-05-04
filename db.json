@@ -36,13 +36,6 @@
       "amount": 8.75
     },
     {
-      "id": 6,
-      "date": "2019-12-06",
-      "description": "Chipotle",
-      "category": "Food",
-      "amount": -17.59
-    },
-    {
       "id": 7,
       "date": "2019-12-07",
       "description": "Birthday Check from Grandma",
@@ -85,18 +78,18 @@
       "amount": -975
     },
     {
-      "date": "2024-05-15",
-      "description": "movie",
-      "category": "Entertainment",
-      "amount": 11111111111111,
-      "id": 13
-    },
-    {
       "date": "2024-05-09",
       "description": "movie",
       "category": "jshsghsg",
       "amount": 788888,
       "id": 14
+    },
+    {
+      "date": "2024-05-22",
+      "description": "heloooo",
+      "category": "Entertainment",
+      "amount": 9898989898,
+      "id": 15
     }
   ]
 }
