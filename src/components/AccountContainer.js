@@ -73,4 +73,4 @@ function AccountContainer() {
   );
 }
 
-export default AccountContainer;
+export default AccountContainer
